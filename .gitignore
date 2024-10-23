@@ -1,4 +1,5 @@
 .env
 env
 __pychache__
-
+/Users/pedrotodescan/Documents/code/quant/__pycache__
+.DS_Store
