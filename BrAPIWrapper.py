@@ -4,7 +4,6 @@ import pandas as pd
 from typing import List, Optional, Dict, Any, Union
 from datetime import datetime
 import time
-import pandas as pd
 from datetime import datetime, timezone, timedelta
 from utils import historical_data_to_dataframe, financial_statement_to_dataframe, prime_rate_to_dataframe, inflation_to_dataframe
 from typing import Dict, Any

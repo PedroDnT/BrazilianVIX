@@ -1,4 +1,5 @@
-# Utils 
+# Utils for other files
+
 import pandas as pd
 from datetime import datetime, timezone
 from typing import Dict, Any
