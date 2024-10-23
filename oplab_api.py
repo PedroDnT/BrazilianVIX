@@ -672,12 +672,14 @@ def calculate_daily_vix(df):
             options = daily_options[daily_options['due_date'] == maturity].copy()
             T = options['days_to_maturity'].iloc[0] / 365
             times.append(T)
-            from BrAPIWrapper import BrAPIWrapper
+            from Brapi import BrAPIWrapper
             api = BrAPIWrapper()
             # Fetch or calculate risk-free rate for the date and maturity
             # Get prime rate data for the current date
             prime_rate_data = api.get_prime_rate(start='01/01/2022', end='01/06/2024')
-
+            prime_rate_data['date'] = pd.to_datetime(prime_rate_data.index)
+            prime_rate_data.reset_index(drop=True, inplace=True)
+            prime_rate_data.rename(columns={'prime_rate': 'rate'}, inplace=True)
             # Match the date and get the rate
             r = prime_rate_data[prime_rate_data['date'].dt.date == current_date.date()]['rate'].iloc[0]
 
