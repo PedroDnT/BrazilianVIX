@@ -27,7 +27,7 @@ def fetch_interest(src='cetip'):
     else:
         return df['value'][0]/100
 
-# USED
+# USED ON 
 #1.1  Fetch active option chani for a given day
 def fetch_options_data():
     url = 'https://api.oplab.com.br/v3/market/options/IBOV'
