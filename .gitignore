@@ -1,5 +1,22 @@
+# Secrets
 .env
-env
-__pychache__
-/Users/pedrotodescan/Documents/code/quant/__pycache__
+
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS
 .DS_Store
+.DS_Store?
+._*
+Thumbs.db
